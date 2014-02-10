@@ -1,4 +1,4 @@
-# Vagrant-MakeButler
+# Butler-Vagrant
 A Vagrant configuration for Butler development.
 
 ## Requirements
@@ -6,16 +6,19 @@ A Vagrant configuration for Butler development.
 - VirtualBox (4.3.6) (https://www.virtualbox.org/)
 - Vagrant (1.4.3) (http://www.vagrantup.com/)
 - vagrant-hostmanager(1.3.0) (https://github.com/smdahlen/vagrant-hostmanager)
-- vagrant-vbguest (https://github.com/dotless-de/vagrant-vbguest)
+- vagrant-vbguest (0.10.0) (https://github.com/dotless-de/vagrant-vbguest)
+
+### Updating VirtualBox Guest Additions
+The default packaged vagrant box contains an outdated VirtualBox Guest Additions. This actually is trivial since we have not encountered any issues caused by the unmatching guest additions. But we prefer to have our environment set up without any error messages, so we chose to update the VirtualBox Guest Addition using vagrant vb-guest plugin.
 
 ## Instructions
 
-1. Setup Butler-Vagrant.
+1. Setup Butler-Vagrant
 ```
-> git clone git://github.com/mrzjaki/Butler-Vagrant
+> cd /path/to/your/development/folder
+> git clone https://github.com/prixde/Butler-Vagrant.git
 > cd Butler-Vagrant
-> git submodule init
-> git submodule update
+> git submodule update --init
 ```
 
 2. Initialize Butler-Vagrant
